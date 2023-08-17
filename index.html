@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Currency Converter</title>
+</head>
+<body>
+    <main>
+        <h2 id="eRateText">Exchange Rate</h2>
+        <section id="eRateValue">
+            0
+        </section>
+        <section class="convertFromAndTo">
+            <select name="cFrom" id="cFrom" title="Convert from">
+                <option value="INR">INR</option>
+            </select>
+            <button id="reverse" class="fa-solid fa-repeat fa-2xl" title="Convert now"></button>
+            <select name="cTo" id="cTo" title="Convert to">
+                <option value="INR">INR</option>
+            </select>
+        </section>
+        <section class="enterValue">
+            <!-- <label for="inputVal">Enter value</label> -->
+            <input type="text" placeholder="Enter Your Value" id="rateValue">
+        </section>
+        <button id="convertBtn">Convert</button>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
