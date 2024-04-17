@@ -10,10 +10,7 @@ let ERConvert
 
 
 const fetchOptions = async () => {
-    data = await fetch("https://api.apilayer.com/exchangerates_data/latest",{ 
-                      headers: {
-                          "apikey": "ttDhsGvYEK82fpUO3mpmHRwnYC1Ik6eL"
-    }},)
+    data = await fetch("https://api.apilayer.com/exchangerates_data/latest", {headers: {"apikey": "ttDhsGvYEK82fpUO3mpmHRwnYC1Ik6eL"}})
     objData = await data.json()
 
     curtypes = Object.keys(objData.rates)
@@ -40,7 +37,7 @@ const fetchOptions = async () => {
 fetchOptions()
 
 const valueConvert = async () => {
-    data = await fetch(`https://api.exchangerate.host/latest?base=${cFrom.value}`)
+    data = await fetch(`https://api.apilayer.com/exchangerates_data/latest?base=${cFrom.value}`, {headers: {"apikey": "ttDhsGvYEK82fpUO3mpmHRwnYC1Ik6eL"}})
     objData = await data.json()
 
     conRate = await objData.rates[cTo.value]
